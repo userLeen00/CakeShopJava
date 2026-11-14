@@ -1,2 +1,49 @@
-# CakeShopJava
-developed program to make a simple interface for the customer to chose from the desired object  (cake)  from the  menu  and check out with a recite its a simple user interactive interface that was designed with two different separate concepts:OOP and Event driven  each concept has its own features with a unique degsin 
+# Cake Shop Ordering System
+
+A cake-ordering application written in Java and implemented **three ways** to compare programming paradigms on the same problem. Built for the Java Programming course at Al Hussein Technical University (HTU), Spring 2025.
+
+## Overview
+
+A customer browses a cake menu sorted by price, adds items to an order, and receives a total. Orders over 15 JD receive a 10% discount in the console versions.
+
+| Version | Package | Approach | Interface |
+|---|---|---|---|
+| Procedural | `proceduralCode` | Static methods and parallel arrays | Console (simulated input) |
+| Object-Oriented | `oopCode` | `Cake` / `SaucedCake` class hierarchy, `ManageCakeShop` | Console (`Scanner`) |
+| Event-Driven | `javaEvents` | Java Swing with event listeners | Graphical (two windows) |
+
+## Features
+
+- **Selection Sort** to order the menu by price (implemented in each version)
+- **Discount logic**: 10% off when the total exceeds 15 JD
+- **OOP concepts**: encapsulation (private fields, getters/setters), inheritance (`SaucedCake extends Cake`), polymorphism (overridden `toString`), constructor overloading
+- **Event handling** (Swing): key, mouse, mouse-motion and action listeners; double-click to start; Visa/Cash payment checkbox; input validation with `try/catch` and dialog messages; receipt dialog
+
+## Project structure
+
+```
+src/
+├── proceduralCode/   CakeShopProcedural.java
+├── oopCode/          Cake.java, SaucedCake.java, ManageCakeShop.java, CakeShopOOP.java
+└── javaEvents/       CakeShopED.java
+```
+
+## Run
+
+Requires JDK 11 or later.
+
+```bash
+javac -d out src/proceduralCode/*.java src/oopCode/*.java src/javaEvents/*.java
+
+java -cp out proceduralCode.CakeShopProcedural
+java -cp out oopCode.CakeShopOOP
+java -cp out javaEvents.CakeShopED
+```
+
+## Tech
+
+Java, Swing (AWT events), Eclipse IDE
+
+## Author
+
+Leen Shannak - Computer Science student, HTU
