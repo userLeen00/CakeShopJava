@@ -11,6 +11,7 @@ A customer browses a cake menu sorted by price, adds items to an order, and rece
 | Procedural | `proceduralCode` | Static methods and parallel arrays | Console (simulated input) |
 | Object-Oriented | `oopCode` | `Cake` / `SaucedCake` class hierarchy, `ManageCakeShop` | Console (`Scanner`) |
 | Event-Driven | `javaEvents` | Java Swing with event listeners | Graphical (two windows) |
+| Event-Driven (extended) | `eventDriven` | Swing version with customer name, per-cake quantity fields and Visa/Cash checkbox | Graphical |
 
 ## Features
 
@@ -25,7 +26,8 @@ A customer browses a cake menu sorted by price, adds items to an order, and rece
 src/
 ├── proceduralCode/   CakeShopProcedural.java
 ├── oopCode/          Cake.java, SaucedCake.java, ManageCakeShop.java, CakeShopOOP.java
-└── javaEvents/       CakeShopED.java
+├── javaEvents/       CakeShopED.java
+└── eventDriven/      EventDriven.java (extended version), Test.java (earlier prototype)
 ```
 
 ## Run
@@ -33,11 +35,12 @@ src/
 Requires JDK 11 or later.
 
 ```bash
-javac -d out src/proceduralCode/*.java src/oopCode/*.java src/javaEvents/*.java
+javac -d out src/proceduralCode/*.java src/oopCode/*.java src/javaEvents/*.java src/eventDriven/*.java
 
 java -cp out proceduralCode.CakeShopProcedural
 java -cp out oopCode.CakeShopOOP
 java -cp out javaEvents.CakeShopED
+java -cp out eventDriven.EventDriven
 ```
 
 ## Tech
